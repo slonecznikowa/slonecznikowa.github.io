@@ -271,4 +271,4 @@ var animatedBackground = (function () {
 
 });
 
-animatedBackground();
+//animatedBackground();
