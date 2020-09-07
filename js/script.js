@@ -40,52 +40,35 @@ var multiItemSlider = (function () {
     });
 
     var position = {
-      getItemMin: function () {
-        var indexItem = 0;
-        _items.forEach(function (item, index) {
-          if (item.position < _items[indexItem].position) {
-            indexItem = index;
-          }
-        });
-        return indexItem;
-      },
-      getItemMax: function () {
-        var indexItem = 0;
-        _items.forEach(function (item, index) {
-          if (item.position > _items[indexItem].position) {
-            indexItem = index;
-          }
-        });
-        return indexItem;
-      },
-      getMin: function () {
-        return _items[position.getItemMin()].position;
-      },
-      getMax: function () {
-        return _items[position.getItemMax()].position;
-      }
+      getMin: 0,
+      getMax: _items.length - 1,
     }
 
     var _transformItem = function (direction) {
-      var nextItem;
       if (direction === 'right') {
-        _positionLeftItem++;
-        if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) > position.getMax()) {
-          nextItem = position.getItemMin();
-          _items[nextItem].position = position.getMax() + 1;
-          _items[nextItem].transform += _items.length * 100;
-          _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
+        if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+          return;
         }
+        if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+          _sliderControlLeft.classList.add('slider__control_show');
+        }
+        if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+          _sliderControlRight.classList.remove('slider__control_show');
+        }
+        _positionLeftItem++;
         _transform -= _step;
       }
       if (direction === 'left') {
-        _positionLeftItem--;
-        if (_positionLeftItem < position.getMin()) {
-          nextItem = position.getItemMax();
-          _items[nextItem].position = position.getMin() - 1;
-          _items[nextItem].transform -= _items.length * 100;
-          _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
+        if (_positionLeftItem <= position.getMin) {
+          return;
         }
+        if (!_sliderControlRight.classList.contains('slider__control_show')) {
+          _sliderControlRight.classList.add('slider__control_show');
+        }
+        if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+          _sliderControlLeft.classList.remove('slider__control_show');
+        }
+        _positionLeftItem--;
         _transform += _step;
       }
       _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
