@@ -226,11 +226,11 @@ var animatedBackground = (function () {
       var colorRadomizer = (i / howManyCircles) * 100;
 
       if (colorRadomizer <= 40) {
-        var circleColor = 'rgba(26, 99, 142,'; //blue
+        var circleColor = 'rgba(20, 56, 110,';
       } else if ((colorRadomizer > 40) && (colorRadomizer <= 80)) {
-        var circleColor = 'rgba(0, 125, 105,'; //green
+        var circleColor = 'rgba(17, 47, 92,';
       } else {
-        var circleColor = 'rgba(21, 216, 223,'; //aqua
+        var circleColor = 'rgba(61, 97, 151,';
         size /= 2;
         radius /= 2;
         opacity /= 2;
