@@ -69,8 +69,8 @@ var multiItemSlider = (function () {
         }
         _positionLeftItem++;
 
-        // это костыль, чтобы последний элемент оставался скраю, не оставляя пустое место
-        if (_config.visibleSlides > 1 && _positionLeftItem == position.getMax - 1) {
+        // это костыль, чтобы последний элемент оставался скраю справа, не оставляя пустое место
+        if (_positionLeftItem == position.getMax - (_config.visibleSlides - 1)) {
           var lastStep = (_itemWidth / _wrapperWidth * 100) * ( Math.abs(100 - _config.widthPercent * (_config.visibleSlides + 1)) / _config.widthPercent );          
           _transform -= lastStep;
         }
@@ -90,8 +90,8 @@ var multiItemSlider = (function () {
         }
         _positionLeftItem--;
         
-        // симметричный сдвиг для костыля, чтобы все не поехало при листании в обратном порядке
-        if (_config.visibleSlides > 1 && _positionLeftItem == position.getMax - 2 ) {
+        // симметричный ответ для костыля, чтобы все не поехало при листании в обратном порядке
+        if (_positionLeftItem == position.getMax - _config.visibleSlides) {
           var lastStep = (_itemWidth / _wrapperWidth * 100) * ( Math.abs(100 - _config.widthPercent * (_config.visibleSlides + 1)) / _config.widthPercent );          
           _transform += lastStep;
         } else {
