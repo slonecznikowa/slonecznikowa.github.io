@@ -33,6 +33,18 @@ var multiItemSlider = (function () {
       _items = []; // массив элементов
 
     var _startX = 0;
+    const width = parseFloat(document.body.clientWidth); // ширина экрана
+    
+    var _config = {
+      widthPercent: 38, // процент от ширины экрана, который занимает один слайд
+      visibleSlides: 2 // количество видимых слайдов
+    };
+    
+    for (var key in config) {
+      if (key in _config) {
+        _config[key] = config[key];
+      }
+    }
 
     // наполнение массива _items
     _sliderItems.forEach(function (item, index) {
@@ -56,7 +68,15 @@ var multiItemSlider = (function () {
           _sliderControlRight.classList.remove('slider__control_show');
         }
         _positionLeftItem++;
-        _transform -= _step;
+
+        // это костыль, чтобы последний элемент оставался скраю, не оставляя пустое место
+        if (_config.visibleSlides > 1 && _positionLeftItem == position.getMax - 1) {
+          var lastStep = (_itemWidth / _wrapperWidth * 100) * ( Math.abs(100 - _config.widthPercent * (_config.visibleSlides + 1)) / _config.widthPercent );          
+          _transform -= lastStep;
+        }
+        else {  
+          _transform -= _step;
+        }
       }
       if (direction === 'left') {
         if (_positionLeftItem <= position.getMin) {
@@ -69,7 +89,14 @@ var multiItemSlider = (function () {
           _sliderControlLeft.classList.remove('slider__control_show');
         }
         _positionLeftItem--;
-        _transform += _step;
+        
+        // симметричный сдвиг для костыля, чтобы все не поехало при листании в обратном порядке
+        if (_config.visibleSlides > 1 && _positionLeftItem == position.getMax - 2 ) {
+          var lastStep = (_itemWidth / _wrapperWidth * 100) * ( Math.abs(100 - _config.widthPercent * (_config.visibleSlides + 1)) / _config.widthPercent );          
+          _transform += lastStep;
+        } else {
+          _transform += _step;
+        }
       }
       _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
     }
@@ -89,7 +116,6 @@ var multiItemSlider = (function () {
         item.addEventListener('click', _controlClick);
       });
       // добавление прокрутки прикосновением на мобильных устройствах
-      const width = parseFloat(document.body.clientWidth);
       if(width < 768) {
         _mainElement.addEventListener('touchstart', function (e) {
           _startX = e.changedTouches[0].clientX;
@@ -123,11 +149,20 @@ var multiItemSlider = (function () {
 }());
 
 
-var sliderSVC = multiItemSlider('.services__slider')
+var sliderSVC = multiItemSlider('.services__slider', {
+  widthPercent: 38,
+  visibleSlides: 2
+})
 
-var sliderADV = multiItemSlider('.advantages__slider')
+var sliderADV = multiItemSlider('.advantages__slider', {
+  widthPercent: 63,
+  visibleSlides: 1
+})
 
-var sliderCS = multiItemSlider('.cases__slider')
+var sliderCS = multiItemSlider('.cases__slider', {
+  widthPercent: 76,
+  visibleSlides: 1
+})
 
 /*
 Анимированный бэкграунд
