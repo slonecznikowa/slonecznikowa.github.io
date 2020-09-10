@@ -3,16 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ULS24 - Главная</title>
+    <title>ULS24 - Железнодорожные услуги</title>
     <link rel="preload" href="fonts/robotocondensed-bold.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="preload" href="fonts/roboto.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="stylesheet" href="css/style.min.css">
 
 
+
+
   </head>
   <body>
     <div class="wrapper">
-<!--      <canvas id="bg"></canvas>-->
       <div class="inner">
         <header class="page-header">
           <div class="page-header__contacts">
@@ -38,7 +39,7 @@
             </a>
           </div>
           <div class="page-header__navigation main-nav main-nav--closed main-nav--nojs">
-            <a class="page-header__logo logo" href="#">
+            <a class="page-header__logo logo" href="/">
               <picture>
                 <!--[if IE 9]>
                 <video style="display: none;"><![endif]-->
@@ -97,273 +98,127 @@
           </div>
         </header>
         <main class="page-main">
-          <h1 class="visually-hidden">"Юнайтед Лоджистик Системс" - логистические услуги по всей России.</h1>
-          <section class="services">
-            <h2 class="services__title title">Надежность, качество, быстрый сервис</h2>
-            <div class="services__button-wrapper request">
-              <a class="services__button button button--green request__button" href="#">Просто оставьте заявку</a>
-              <span class="services__button-note request__note">Остальное мы берем на себя</span>
+          <h1 class="visually-hidden">Услуги компании "Юнайтед Лоджистик Системс".</h1>
+          <section class="service-item">
+            <div class="service-item__advantages-wrapper">
+              <div class="service-item__advantages-inner">
+                <h2 class="service-item__title title">Морские перевозки</h2>
+
+                <ul class="service-item__advantages-list">
+                  <li class="service-item__advantages-item">
+                    <svg class="service-item__advantages-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M46.6945 41.195L40.0414 34.5419V0H6.94838V7.85283L0.140625 9.74858L6.94838 34.1963V41.8738H9.08628L10.779 47.9525L32.609 41.8738H36.0952L41.0555 46.834C41.8328 47.6114 42.8539 48 43.875 48C44.8962 48 45.9173 47.6113 46.6946 46.834C48.2491 45.2793 48.2491 42.7496 46.6945 41.195ZM3.60713 11.7049L6.94828 10.7745V23.7037L3.60713 11.7049ZM12.7354 44.4859L12.008 41.8737H22.1164L12.7354 44.4859ZM9.76301 39.059V2.81463H37.2269V31.7273L32.6138 27.1143H33.2863V24.2997H29.7992L26.7969 21.2974H33.2863V18.4828H21.4474L16.509 16.6485L17.1904 18.4828H14.1469V21.2974H18.2358L19.351 24.2997H14.1469V27.1143H21.3358L24.3381 30.1166H14.1468V32.9312H27.1527L33.2805 39.059H9.76301ZM22.2658 24.0638L21.2857 21.4252L23.9244 22.4052L41.8847 40.3657L41.0554 41.195L40.2262 42.0243L22.2658 24.0638ZM44.7042 44.8438C44.2469 45.3011 43.503 45.301 43.0457 44.8438L42.2164 44.0145L43.0457 43.1852L43.875 42.3559L44.7041 43.1851C45.1615 43.6425 45.1615 44.3865 44.7042 44.8438Z" fill="black"></path>
+                    </svg>
+                    <div class="service-item__advantages-content">Фрахт из/в стран Юго-Восточной Азии</div>
+                  </li>
+                  <li class="service-item__advantages-item">
+                    <svg class="service-item__advantages-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M46.6945 41.195L40.0414 34.5419V0H6.94838V7.85283L0.140625 9.74858L6.94838 34.1963V41.8738H9.08628L10.779 47.9525L32.609 41.8738H36.0952L41.0555 46.834C41.8328 47.6114 42.8539 48 43.875 48C44.8962 48 45.9173 47.6113 46.6946 46.834C48.2491 45.2793 48.2491 42.7496 46.6945 41.195ZM3.60713 11.7049L6.94828 10.7745V23.7037L3.60713 11.7049ZM12.7354 44.4859L12.008 41.8737H22.1164L12.7354 44.4859ZM9.76301 39.059V2.81463H37.2269V31.7273L32.6138 27.1143H33.2863V24.2997H29.7992L26.7969 21.2974H33.2863V18.4828H21.4474L16.509 16.6485L17.1904 18.4828H14.1469V21.2974H18.2358L19.351 24.2997H14.1469V27.1143H21.3358L24.3381 30.1166H14.1468V32.9312H27.1527L33.2805 39.059H9.76301ZM22.2658 24.0638L21.2857 21.4252L23.9244 22.4052L41.8847 40.3657L41.0554 41.195L40.2262 42.0243L22.2658 24.0638ZM44.7042 44.8438C44.2469 45.3011 43.503 45.301 43.0457 44.8438L42.2164 44.0145L43.0457 43.1852L43.875 42.3559L44.7041 43.1851C45.1615 43.6425 45.1615 44.3865 44.7042 44.8438Z" fill="black"></path>
+                    </svg>
+                    <div class="service-item__advantages-content">Контейнерные перевозки всеми типами контейнеров</div>
+                  </li>
+                  <li class="service-item__advantages-item">
+                    <svg class="service-item__advantages-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M46.6945 41.195L40.0414 34.5419V0H6.94838V7.85283L0.140625 9.74858L6.94838 34.1963V41.8738H9.08628L10.779 47.9525L32.609 41.8738H36.0952L41.0555 46.834C41.8328 47.6114 42.8539 48 43.875 48C44.8962 48 45.9173 47.6113 46.6946 46.834C48.2491 45.2793 48.2491 42.7496 46.6945 41.195ZM3.60713 11.7049L6.94828 10.7745V23.7037L3.60713 11.7049ZM12.7354 44.4859L12.008 41.8737H22.1164L12.7354 44.4859ZM9.76301 39.059V2.81463H37.2269V31.7273L32.6138 27.1143H33.2863V24.2997H29.7992L26.7969 21.2974H33.2863V18.4828H21.4474L16.509 16.6485L17.1904 18.4828H14.1469V21.2974H18.2358L19.351 24.2997H14.1469V27.1143H21.3358L24.3381 30.1166H14.1468V32.9312H27.1527L33.2805 39.059H9.76301ZM22.2658 24.0638L21.2857 21.4252L23.9244 22.4052L41.8847 40.3657L41.0554 41.195L40.2262 42.0243L22.2658 24.0638ZM44.7042 44.8438C44.2469 45.3011 43.503 45.301 43.0457 44.8438L42.2164 44.0145L43.0457 43.1852L43.875 42.3559L44.7041 43.1851C45.1615 43.6425 45.1615 44.3865 44.7042 44.8438Z" fill="black"></path>
+                    </svg>
+                    <div class="service-item__advantages-content">Перевозки сборных грузов</div>
+                  </li>
+                 </ul>
+
+
+
+                <div class="service-item__advantages-button-wrapper request">
+                  <a class="service-item__advantages-button button button--green request__button" href="#">Просто оставьте заявку</a>
+                  <span class="service-item__advantages-button-note request__note">Остальное мы берем на себя</span>
+                </div>
+
+              </div>
+              <div class="service-item__advantages-image service-item__advantages-image--main">
+                <picture>
+                <!--[if IE 9]>
+                <video style="display: none;"><![endif]-->
+                <source media="(min-width: 1440px)" srcset="img/rail1-desktop.jpg">
+                <source media="(min-width: 768px)" srcset="img/rail1-tablet.jpg">
+                <!--[if IE 9]></video><![endif]-->
+                <img class="service-image service-image--main" src="img/rail1-mobile.jpg" alt="Железнодорожные перевозки">
+              </picture>
+              </div>
             </div>
-            <div class="services__slider slider">
-              <ul class="services__slider-list slider__wrapper">
-                <li class="services__slider-item slider__item">
-                  <div class="services__slider-content">
-                    <a class="services__slider-link" href="services-auto.html">
-                      <span class="services__img services__slider-auto"></span>
-                      <span class="services__slider-title services__auto-title">Автоперевозки</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="services__slider-item slider__item">
-                  <div class="services__slider-content">
-                    <a class="services__slider-link" href="services-rail.html">
-                      <span class="services__img services__slider-rail"></span>
-                      <span class="services__slider-title services__rail-title">Железнодорожные<br> перевозки</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="services__slider-item slider__item">
-                  <div class="services__slider-content">
-                    <a class="services__slider-link" href="services-ship.html">
-                      <span class="services__img services__slider-ship"></span>
-                      <span class="services__slider-title services__ship-title">Перевозка<br> морем</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="services__slider-item slider__item">
-                  <div class="services__slider-content">
-                    <a class="services__slider-link" href="services-air.html">
-                      <span class="services__img services__slider-air"></span>
-                      <span class="services__slider-title services__air-title">Авиаперевозки</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="services__slider-item slider__item">
-                  <div class="services__slider-content">
-                    <a class="services__slider-link" href="services-storage.html">
-                      <span class="services__img services__slider-storage"></span>
-                      <span class="services__slider-title services__storage-title">Складское<br> хранение</span>
-                    </a>
-                  </div>
-                </li>
-              </ul>
-              <a class="slider__control slider__control_left services__slider-control" href="#" role="button"></a>
-              <a class="slider__control slider__control_right services__slider-control slider__control_show" href="#" role="button"></a>
+
+            <div class="service-item__advantages-wrapper">
+              <div class="service-item__advantages-image">
+                <picture>
+                <!--[if IE 9]>
+                <video style="display: none;"><![endif]-->
+                <source media="(min-width: 1440px)" srcset="img/rail-desktop.jpg">
+                <source media="(min-width: 768px)" srcset="img/rail-tablet.jpg">
+                <!--[if IE 9]></video><![endif]-->
+                <img class="service-image" src="img/rail-mobile.jpg" alt="Железнодорожные перевозки">
+                </picture>
+              </div>
+              <div class="service-item__advantages-inner">
+                <ul class="service-item__advantages-list service-item__advantages-list--blue">
+                  <li class="service-item__advantages-item">
+                    <svg class="service-item__advantages-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M38.1512 24.5616C37.3462 32.6663 30.7793 39.1803 22.6688 39.9256C13.0814 40.8065 4.906 33.7575 3.9577 24.5956H2.26803C1.24077 24.5956 0.598744 23.4834 1.11247 22.5939L4.89142 16.0499C5.40508 15.1605 6.68901 15.1605 7.2026 16.05L10.9808 22.5939C11.4944 23.4835 10.8524 24.5956 9.82522 24.5956H8.35423C9.30986 31.436 15.6782 36.5663 22.9799 35.4961C28.3829 34.7043 32.7656 30.4414 33.684 25.0584C35.0586 17.0014 28.8586 9.98922 21.0519 9.98922C18.5202 9.98922 16.0768 10.7237 13.9778 12.1146C13.0037 12.7601 11.6534 12.6324 10.9387 11.7079C10.1606 10.7012 10.4036 9.26418 11.4412 8.56353C13.6931 7.04222 16.2461 6.0915 18.9208 5.76046V3.28H17.1702C16.5679 3.28 16.0796 2.79176 16.0796 2.18941V1.09059C16.0796 0.488235 16.5678 0 17.1702 0H25.2885C25.8908 0 26.3791 0.488235 26.3791 1.09059V2.18941C26.3791 2.7917 25.8909 3.28 25.2885 3.28H23.3603V5.78634C32.3049 6.9932 39.0906 15.1021 38.1512 24.5616ZM38.716 8.05654L35.4276 5.01699C34.9853 4.60817 34.2953 4.63529 33.8865 5.07758L33.0166 6.01869C32.6077 6.46098 32.6348 7.15098 33.0772 7.55987L36.3655 10.5993C36.8079 11.0081 37.4978 10.981 37.9067 10.5388L38.7766 9.59765C39.1855 9.15536 39.1584 8.46536 38.716 8.05654ZM21.0002 12.2313V22.8976H31.56C31.5601 16.4019 26.6318 12.2313 21.0002 12.2313Z" fill="white"></path>
+                    </svg>
+                    <div class="service-item__advantages-content">Доставляем точно в срок.</div>
+                  </li>
+                  <li class="service-item__advantages-item">
+                    <svg class="service-item__advantages-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0)">
+                        <path d="M19.9357 14.6448V31.128L33.0584 28.6376V20.6065C33.0584 20.2702 33.3512 20.0091 33.6852 20.0474L35.2997 20.2972C35.5837 20.3299 35.7982 20.5703 35.7982 20.8563V30.1862C35.7982 30.4514 35.613 30.6806 35.3537 30.7363L20.9886 33.8251C20.2944 33.9743 19.5765 33.9759 18.8817 33.8298L4.67071 30.8406C4.41568 30.787 4.23084 30.5651 4.22404 30.3046L3.97855 20.8291C3.97084 20.5319 4.19568 20.2801 4.49175 20.2541L16.5631 19.1934C16.7725 19.175 16.9541 19.0414 17.0342 18.8472L18.8527 14.4306C19.0874 13.8607 19.9357 14.0285 19.9357 14.6448ZM3.84202 9.24809L0.0539112 17.3452C-0.131187 17.7409 0.185545 18.1874 0.62012 18.1434L14.8463 16.706C15.0474 16.6857 15.2221 16.5591 15.304 16.3744L19.8815 6.06201L4.25006 8.93312C4.07117 8.966 3.91914 9.08332 3.84202 9.24809ZM19.8816 6.06201L24.7251 16.6968C24.8097 16.8827 24.9884 17.008 25.1921 17.0244L39.3914 18.1663C39.8193 18.2007 40.1266 17.7625 39.9484 17.3719L36.2453 9.25351C36.1687 9.08561 36.0147 8.966 35.833 8.93325L19.8816 6.06201Z" fill="white"></path>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <rect width="40" height="40" fill="white"></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <div class="service-item__advantages-content">Организуем погрузку и разгрузку по заказу клиента.</div>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </section>
-          <section class="advantages">
-            <h2 class="advantages__title title">«Юнайтед Лоджистик Системс» – это:</h2>
-            <div class="advantages__slider slider">
-              <ul class="advantages__slider-list slider__wrapper">
-                <li class="advantages__slider-item slider__item">
-                  <div class="advantages__slider-content">Доставка
-                    <span class="advantages__note">по всей<br> России</span>
-                    <a class="advantages__button button--green button" href="#">Узнать стоимость</a>
-                    <picture>
-                      <!--[if IE 9]>
-                      <video style="display: none;"><![endif]-->
-                      <source media="(min-width: 1440px)" srcset="img/adv2-desktop@1x.jpg 1x, img/adv2-desktop@2x.jpg 2x">
-                      <source media="(min-width: 768px)" srcset="img/adv2-tablet@1x.jpg 1x, img/adv2-tablet@2x.jpg 2x">
-                      <!--[if IE 9]></video><![endif]-->
-                      <img class="advantages__img" src="img/adv2-tablet@1x.jpg" srcset="img/adv2-tablet@2x.jpg 2x" alt="Доставка по всей России">
-                    </picture>
-                  </div>
-                </li>
-                <li class="advantages__slider-item slider__item">
-                  <div class="advantages__slider-content">Ежемесячно более
-                    <span class="advantages__note">2000 контейнеров</span>
-                    <picture>
-                      <!--[if IE 9]>
-                      <video style="display: none;"><![endif]-->
-                      <source media="(min-width: 1440px)" srcset="img/adv3-desktop@1x.jpg 1x, img/adv3-desktop@2x.jpg 2x">
-                      <source media="(min-width: 768px)" srcset="img/adv3-tablet@1x.jpg 1x, img/adv3-tablet@2x.jpg 2x">
-                      <!--[if IE 9]></video><![endif]-->
-                      <img class="advantages__img" src="img/adv3-tablet@1x.jpg" srcset="img/adv3-tablet@2x.jpg 2x" alt="Ежемесячно более 2000 контейнеров">
-                    </picture>
-                  </div>
-                </li>
-                <li class="advantages__slider-item slider__item">
-                  <div class="advantages__slider-content">Поддержка 24/7
-                    <span class="advantages__note">Личные менеджеры</span>
-                    <picture>
-                      <!--[if IE 9]>
-                      <video style="display: none;"><![endif]-->
-                      <source media="(min-width: 1440px)" srcset="img/adv-desktop@1x.jpg 1x, img/adv-desktop@2x.jpg 2x">
-                      <source media="(min-width: 768px)" srcset="img/adv-tablet@1x.jpg 1x, img/adv-tablet@2x.jpg 2x">
-                      <!--[if IE 9]></video><![endif]-->
-                      <img class="advantages__img" src="img/adv-tablet@1x.jpg" srcset="img/adv-tablet@2x.jpg 2x" alt="Поддержка 24/7 Личные менеджеры">
-                    </picture>
-                  </div>
-                </li>
-              </ul>
-              <a class="slider__control slider__control_left advantages__slider-control" href="#" role="button"></a>
-              <a class="slider__control slider__control_right slider__control_show advantages__slider-control" href="#" role="button"></a>
+
+
+            <div class="service-item__description">
+              <p><span class="note note--blue">ООО «ЮНАЙТЕД ЛОДЖИСТИК СИСТЕМС»</span> может предложить как исключительно морскую перевозку, так и полный комплекс услуг по доставке груза «от двери до двери», включая перевозку морским и речным транспортом, портовую перевалку/обработку грузов, страхование, а также последующую доставку до склада клиента автомобильным или железнодорожным транспортом. В составе мультимодальных перевозок можем осуществить фрахт из/в стран Юго-Восточной Азии.</p>
+
+
+
+
+<!--              <ul class="service-item__terminals-list">-->
+<!--                <li class="service-item__terminals-item">-->
+<!--                  <span class="service-item__terminals-title">-->
+<!--                    <svg width="40" height="64" viewBox="0 0 40 64" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                      <path d="M38.0001 3.99994H32.0001V1.99997C32.0001 0.894506 31.1056 0 30.0001 0H9.99999C8.89452 0 8.00002 0.894506 8.00002 1.99997V3.99994H1.99997C0.894506 3.99994 0 4.89444 0 5.99991V46C0 46.9375 0.650331 47.75 1.56642 47.9531L7.55596 49.2842L3.69145 62.8906L7.53523 64L8.67122 60.0001H31.329L32.465 64L36.3088 62.8906L32.4443 49.2842L38.4338 47.9531C39.3499 47.75 40.0002 46.9375 40.0002 46V6.00005C40.0001 4.89459 39.1056 3.99994 38.0001 3.99994ZM9.99999 8.00002C11.1054 8.00002 12 7.10551 12 6.00005V3.99994H28V5.99991C28 7.10537 28.8945 7.99988 30 7.99988H36V23.9999H4.00008V8.00002H9.99999ZM30.1927 56H9.80749L11.4679 50.1533L19.5666 51.9531C19.7091 51.9843 19.8556 51.9999 20.0001 51.9999C20.1446 51.9999 20.2911 51.9843 20.4337 51.9531L28.5324 50.1533C28.5324 50.1534 30.1927 56 30.1927 56ZM20 47.9511L3.99994 44.3964V28H36V44.3965L20 47.9511Z" fill="#14386E"/>-->
+<!--                    </svg>-->
+<!--                    ст. Ховрино-->
+<!--                  </span>-->
+<!--                  <p class="service-item__terminals-content">Крупнейший транспортный узел на Севере Москвы, внутри МКАД, подведомственный Октябрьской железной дороге. Удобное расположение терминала позволяет существенно сократить расходы на логистику и уменьшить транзитное время. Оснащенный по последнему слову техники, терминал работает на прием и выгрузку контейнеров в режиме on-line.</p>-->
+<!--                </li>-->
+<!--                <li class="service-item__terminals-item">-->
+<!--                  <span class="service-item__terminals-title">-->
+<!--                    <svg width="40" height="64" viewBox="0 0 40 64" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                      <path d="M38.0001 3.99994H32.0001V1.99997C32.0001 0.894506 31.1056 0 30.0001 0H9.99999C8.89452 0 8.00002 0.894506 8.00002 1.99997V3.99994H1.99997C0.894506 3.99994 0 4.89444 0 5.99991V46C0 46.9375 0.650331 47.75 1.56642 47.9531L7.55596 49.2842L3.69145 62.8906L7.53523 64L8.67122 60.0001H31.329L32.465 64L36.3088 62.8906L32.4443 49.2842L38.4338 47.9531C39.3499 47.75 40.0002 46.9375 40.0002 46V6.00005C40.0001 4.89459 39.1056 3.99994 38.0001 3.99994ZM9.99999 8.00002C11.1054 8.00002 12 7.10551 12 6.00005V3.99994H28V5.99991C28 7.10537 28.8945 7.99988 30 7.99988H36V23.9999H4.00008V8.00002H9.99999ZM30.1927 56H9.80749L11.4679 50.1533L19.5666 51.9531C19.7091 51.9843 19.8556 51.9999 20.0001 51.9999C20.1446 51.9999 20.2911 51.9843 20.4337 51.9531L28.5324 50.1533C28.5324 50.1534 30.1927 56 30.1927 56ZM20 47.9511L3.99994 44.3964V28H36V44.3965L20 47.9511Z" fill="#14386E"/>-->
+<!--                    </svg>-->
+<!--                    ст. Силикатная, терминал «Экодор»-->
+<!--                  </span>-->
+<!--                  <p class="service-item__terminals-content">Один из старейших терминалов Москвы, расположенный всего в 14 км от МКАД к Югу от Москвы, позволяет четко и вовремя осуществить доставку груза грузополучателю. Оперативную работу осуществляют опытнейшие сотрудники. Выгодные условия хранения контейнеров позволяют быстро и качественно спланировать время доставки с минимальными издержками. С 2019 года ООО «ОЛС» осуществляет оформление автомобильного транзита и вывоз в режиме ВТТ также и с этого терминала.</p>-->
+<!--                </li>-->
+<!--              </ul>-->
             </div>
-          </section>
-          <section class="cases">
-            <div class="cases__slider slider">
-              <h2 class="cases__title title">Наши кейсы</h2>
-              <ul class="cases__slider-list cases__list slider__wrapper">
-                <li class="cases__slider-item cases__item slider__item">
-                  <div class="cases__slider-wrapper">
-                    <h3 class="cases__item-title title">Организация отправки автомобилей в контейнерах</h3>
-                    <div class="cases__picture-wrapper">
-                      <picture>
-                        <!--[if IE 9]>
-                        <video style="display: none;"><![endif]-->
-                        <source media="(min-width: 1440px)" srcset="img/case1-desktop@1x.jpg 1x, img/case1-desktop@2x.jpg 2x">
-                        <source media="(min-width: 768px)" srcset="img/case1-tablet@1x.jpg 1x, img/case1-tablet@2x.jpg 2x">
-                        <!--[if IE 9]></video><![endif]-->
-                        <img class="cases__img" src="img/case1-mobile@1x.jpg" srcset="img/case1-mobile@2x.jpg 2x" alt="Организация отправки автомобилей в контейнерах">
-                      </picture>
-                      <ul class="cases__stats">
-                        <li class="cases__stats-item">Объем груза: 15 м3</li>
-                        <li class="cases__stats-item">Срок выполнения: 6 часов</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <p class="cases__desc">Часто клиенты выбирают перемещение автомобилей с помощью контейнера. Наши
-                    сотрудники контролируют процесс погрузки, готовят фото и видеоотчет для клиента для предотвращения
-                    спорных вопросов, а также готовят необходимую документацию для отправки.</p>
-                  <a class="cases__button button--white button" href="#">Подробнее <span>&rarr;</span></a>
-                </li>
-                <li class="cases__slider-item cases__item slider__item">
-                  <div class="cases__slider-wrapper">
-                    <h3 class="cases__item-title title">Произведение перетарки</h3>
-                    <div class="cases__picture-wrapper">
-                      <picture>
-                        <!--[if IE 9]>
-                        <video style="display: none;"><![endif]-->
-                        <source media="(min-width: 1440px)" srcset="img/case1-desktop@1x.jpg 1x, img/case1-desktop@2x.jpg 2x">
-                        <source media="(min-width: 768px)" srcset="img/case1-tablet@1x.jpg 1x, img/case1-tablet@2x.jpg 2x">
-                        <!--[if IE 9]></video><![endif]-->
-                        <img class="cases__img" src="img/case1-mobile@1x.jpg" srcset="img/case1-mobile@2x.jpg 2x" alt="Произведение перетарки">
-                      </picture>
-                      <ul class="cases__stats">
-                        <li class="cases__stats-item">Объем груза: 15 м3</li>
-                        <li class="cases__stats-item">Срок выполнения: 6 часов</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <p class="cases__desc">Произвели перетарку контейнера в фуру на складе ООО «ОЛС», оборудование грузовые
-                    места весом до 7 тонн. В перетарке были задействованы речтакер, погрузчик 10-тонник, погрузчик 2-тонник.
-                    Всю перетарку осуществили за 1,5 часа.</p>
-                  <a class="cases__button button--white button" href="#">Подробнее <span>&rarr;</span></a>
-                </li>
-                <li class="cases__slider-item cases__item slider__item">
-                  <div class="cases__slider-wrapper">
-                    <h3 class="cases__item-title title">Расконсолидация тяжелых контейнеров на складе</h3>
-                    <div class="cases__picture-wrapper">
-                      <picture>
-                        <!--[if IE 9]>
-                        <video style="display: none;"><![endif]-->
-                        <source media="(min-width: 1440px)" srcset="img/case1-desktop@1x.jpg 1x, img/case1-desktop@2x.jpg 2x">
-                        <source media="(min-width: 768px)" srcset="img/case1-tablet@1x.jpg 1x, img/case1-tablet@2x.jpg 2x">
-                        <!--[if IE 9]></video><![endif]-->
-                        <img class="cases__img" src="img/case1-mobile@1x.jpg" srcset="img/case1-mobile@2x.jpg 2x" alt="Расконсолидация тяжелых контейнеров на складе">
-                      </picture>
-                      <ul class="cases__stats">
-                        <li class="cases__stats-item">Объем груза: 15 м3</li>
-                        <li class="cases__stats-item">Срок выполнения: 6 часов</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <p class="cases__desc">Осуществили прием, растарку и расконсолидацию четырех тяжелых 40-футовых
-                    контейнеров стальных листов с последующей затаркой и доставкой на адрес конечного получателя пяти
-                    20-тонными фурами. Общее количество стальных листов в штуках — 139 штук.</p>
-                  <a class="cases__button button--white button" href="#">Подробнее <span>&rarr;</span></a>
-                </li>
-                <li class="cases__slider-item cases__item slider__item">
-                  <div class="cases__slider-wrapper">
-                    <h3 class="cases__item-title title">Расконсолидация тяжелых контейнеров на складе</h3>
-                    <div class="cases__picture-wrapper">
-                      <picture>
-                        <!--[if IE 9]>
-                        <video style="display: none;"><![endif]-->
-                        <source media="(min-width: 1440px)" srcset="img/case1-desktop@1x.jpg 1x, img/case1-desktop@2x.jpg 2x">
-                        <source media="(min-width: 768px)" srcset="img/case1-tablet@1x.jpg 1x, img/case1-tablet@2x.jpg 2x">
-                        <!--[if IE 9]></video><![endif]-->
-                        <img class="cases__img" src="img/case1-mobile@1x.jpg" srcset="img/case1-mobile@2x.jpg 2x" alt="Расконсолидация тяжелых контейнеров на складе">
-                      </picture>
-                      <ul class="cases__stats">
-                        <li class="cases__stats-item">Объем груза: 15 м3</li>
-                        <li class="cases__stats-item">Срок выполнения: 6 часов</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <p class="cases__desc">Осуществили прием, растарку и расконсолидацию четырех тяжелых 40-футовых
-                    контейнеров стальных листов с последующей затаркой и доставкой на адрес конечного получателя пяти
-                    20-тонными фурами. Общее количество стальных листов в штуках — 139 штук.</p>
-                  <a class="cases__button button--white button" href="#">Подробнее <span>&rarr;</span></a>
-                </li>
-              </ul>
-              <a class="cases__slider-control slider__control slider__control_left cases__slider-control" href="#" role="button"></a>
-              <a class="cases__slider-control slider__control slider__control_right slider__control_show cases__slider-control" href="#" role="button"></a>
-            </div>
-          </section>
-          <section class="partners">
-            <h2 class="partners__title title">Наши партнеры</h2>
-            <ul class="partners__list">
-              <li class="partners__item">
-                <picture>
-                  <!--[if IE 9]>
-                  <video style="display: none;"><![endif]-->
-                  <source media="(min-width: 768px)" srcset="img/apl-tablet.svg">
-                  <!--[if IE 9]></video><![endif]-->
-                  <img class="partners__image" src="img/apl-mobile.svg" alt="APL">
-                </picture>
-              </li>
-              <li class="partners__item">
-                <picture>
-                  <!--[if IE 9]>
-                  <video style="display: none;"><![endif]-->
-                  <source media="(min-width: 768px)" srcset="img/fesco-tablet.svg">
-                  <!--[if IE 9]></video><![endif]-->
-                  <img class="partners__image" src="img/fesco-mobile.svg" alt="FESCO">
-                </picture>
-              </li>
-              <li class="partners__item">
-                <picture>
-                  <!--[if IE 9]>
-                  <video style="display: none;"><![endif]-->
-                  <source media="(min-width: 768px)" srcset="img/vigtrans-tablet.svg">
-                  <!--[if IE 9]></video><![endif]-->
-                  <img class="partners__image" src="img/vigtrans-mobile.svg" alt="VIGTrans">
-                </picture>
-              </li>
-              <li class="partners__item">
-                <picture>
-                  <!--[if IE 9]>
-                  <video style="display: none;"><![endif]-->
-                  <source media="(min-width: 768px)" srcset="img/rtl-tablet.svg">
-                  <!--[if IE 9]></video><![endif]-->
-                  <img class="partners__image" src="img/rtl-mobile.svg" alt="RTL">
-                </picture>
-              </li>
-              <li class="partners__item">
-                <picture>
-                  <!--[if IE 9]>
-                  <video style="display: none;"><![endif]-->
-                  <source media="(min-width: 768px)" srcset="img/dvtg-tablet.svg">
-                  <!--[if IE 9]></video><![endif]-->
-                  <img class="partners__image" src="img/dvtg-mobile.svg" alt="ДВТГ">
-                </picture>
-              </li>
-              <li class="partners__item">
-                <picture>
-                  <!--[if IE 9]>
-                  <video style="display: none;"><![endif]-->
-                  <source media="(min-width: 768px)" srcset="img/trans-tablet.svg">
-                  <!--[if IE 9]></video><![endif]-->
-                  <img class="partners__image" src="img/trans-mobile.svg" alt="ТрансКонтейнер">
-                </picture>
-              </li>
-            </ul>
+
+
+
+
+
           </section>
         </main>
         <footer class="page-footer">
           <div class="page-footer__navigation">
-            <a class="page-footer__logo logo" href="#">
+            <a class="page-footer__logo logo" href="/">
               <picture>
                 <!--[if IE 9]>
                 <video style="display: none;"><![endif]-->
@@ -419,11 +274,11 @@
               <span class="page-footer__user-nav-link-title user-nav-link__title hidden-sm">Войти в ЛК</span>
             </a>
             <p class="page-footer__copyright"><span class="page-footer__copyright-year">2020 ©</span> Юнайтед Лоджистикс
-          Системс. Все права защищены.</p>
+              Системс. Все права защищены.</p>
           </div>
         </footer>
       </div>
     </div>
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
   </body>
 </html>
