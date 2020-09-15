@@ -1,6 +1,7 @@
 'use strict';
 
 /* Мобильное меню */
+
 var navMain = document.querySelector(".main-nav");
 var navToggle = document.querySelector(".main-nav__toggle");
 
@@ -15,6 +16,8 @@ navToggle.addEventListener("click", function () {
     navMain.classList.remove("main-nav--opened");
   }
 });
+
+/* Слайдер */
 
 var multiItemSlider = (function () {
   return function (selector, config) {
@@ -34,12 +37,12 @@ var multiItemSlider = (function () {
 
     var _startX = 0;
     const width = parseFloat(document.body.clientWidth); // ширина экрана
-    
+
     var _config = {
       widthPercent: 38, // процент от ширины экрана, который занимает один слайд
       visibleSlides: 2 // количество видимых слайдов
     };
-    
+
     for (var key in config) {
       if (key in _config) {
         _config[key] = config[key];
@@ -71,10 +74,10 @@ var multiItemSlider = (function () {
 
         // это костыль, чтобы последний элемент оставался скраю справа, не оставляя пустое место
         if (_positionLeftItem == position.getMax - (_config.visibleSlides - 1)) {
-          var lastStep = (_itemWidth / _wrapperWidth * 100) * ( Math.abs(100 - _config.widthPercent * (_config.visibleSlides + 1)) / _config.widthPercent );          
+          var lastStep = (_itemWidth / _wrapperWidth * 100) * ( Math.abs(100 - _config.widthPercent * (_config.visibleSlides + 1)) / _config.widthPercent );
           _transform -= lastStep;
         }
-        else {  
+        else {
           _transform -= _step;
         }
       }
@@ -89,10 +92,10 @@ var multiItemSlider = (function () {
           _sliderControlLeft.classList.remove('slider__control_show');
         }
         _positionLeftItem--;
-        
+
         // симметричный ответ для костыля, чтобы все не поехало при листании в обратном порядке
         if (_positionLeftItem == position.getMax - _config.visibleSlides) {
-          var lastStep = (_itemWidth / _wrapperWidth * 100) * ( Math.abs(100 - _config.widthPercent * (_config.visibleSlides + 1)) / _config.widthPercent );          
+          var lastStep = (_itemWidth / _wrapperWidth * 100) * ( Math.abs(100 - _config.widthPercent * (_config.visibleSlides + 1)) / _config.widthPercent );
           _transform += lastStep;
         } else {
           _transform += _step;
@@ -149,144 +152,3 @@ var multiItemSlider = (function () {
 }());
 
 
-var sliderSVC = multiItemSlider('.services__slider', {
-  widthPercent: 38,
-  visibleSlides: 2
-})
-
-var sliderADV = multiItemSlider('.advantages__slider', {
-  widthPercent: 63,
-  visibleSlides: 1
-})
-
-var sliderCS = multiItemSlider('.cases__slider', {
-  widthPercent: 76,
-  visibleSlides: 1
-})
-
-/*
-Анимированный бэкграунд
-Источник: https://codepen.io/DigitalWheelie/pen/Llkfb
-*/
-var animatedBackground = (function () {
-  var mainCanvas = document.getElementById('bg');
-  var mainContext = mainCanvas.getContext('2d');
-  var theWidth = window.innerWidth;
-  var theHeight = window.innerHeight;
-  mainCanvas.width = theWidth;
-  mainCanvas.height = theHeight;
-
-  var howManyCircles = 40;
-
-  var circles = new Array();
-
-  var requestAnimationFrame = window.requestAnimationFrame ||
-    window.mozRequestAnimationFrame ||
-    window.webkitRequestAnimationFrame ||
-    window.msRequestAnimationFrame;
-
-  function Circle(radius, speed, size, xPos, yPos, opacity, circleColor) {
-    this.radius = radius;
-    this.speed = speed;
-    this.size = size;
-    this.xPos = xPos;
-    this.yPos = yPos;
-    this.opacity = opacity;
-    this.circleColor = circleColor;
-
-    this.counter = 0;
-
-    var signHelper = Math.floor(Math.random() * 2);
-
-    if (signHelper == 1) {
-      this.sign = -1;
-    } else {
-      this.sign = 1;
-    }
-  }
-
-  Circle.prototype.update = function () {
-    this.counter += this.sign * this.speed / 20;
-
-    mainContext.beginPath();
-    mainContext.arc(this.xPos + Math.cos(this.counter / 100) * this.radius,
-      this.yPos + Math.sin(this.counter / 100) * this.radius,
-      this.size,
-      0,
-      Math.PI * 2,
-      false);
-
-    mainContext.closePath();
-    mainContext.fillStyle = this.circleColor + this.opacity + ')'; //dark blue
-
-    mainContext.fill();
-  };
-
-  // Register an event listener to
-  // call the resizeCanvas() function each time
-  // the window is resized.
-  window.addEventListener('resize', resizeCanvas, false);
-
-  // Draw canvas border for the first time.
-  resizeCanvas();
-
-  function setupCircles() {
-    //console.log("setup");
-
-    for (var i = 0; i < howManyCircles; i++) {
-      var opacity = .25 + Math.random() * .40;
-      var speed = 1 + Math.random() * 8;
-      var size = (1.6 - opacity) * (130 + Math.random() * 200);
-      var radius = 100 + Math.random() * 100;
-      var randomX = Math.round(Math.random() * (theWidth + size)) - size / 2;
-      var randomY = Math.round(Math.random() * (theHeight + size)) - size / 2;
-
-      var colorRadomizer = (i / howManyCircles) * 100;
-
-      if (colorRadomizer <= 40) {
-        var circleColor = 'rgba(20, 56, 110,';
-      } else if ((colorRadomizer > 40) && (colorRadomizer <= 80)) {
-        var circleColor = 'rgba(17, 47, 92,';
-      } else {
-        var circleColor = 'rgba(61, 97, 151,';
-        size /= 2;
-        radius /= 2;
-        opacity /= 2;
-      }
-
-      var circle = new Circle(radius, speed, size, randomX, randomY, opacity, circleColor);
-      circles.push(circle);
-    }
-    drawAndUpdate();
-  }
-
-  function drawAndUpdate() {
-    //console.log("draw & update " + theWidth + " " + theHeight);
-    requestAnimationFrame(drawAndUpdate);
-
-    mainContext.clearRect(0, 0, theWidth, theHeight);
-
-    for (var i = 0; i < circles.length; i++) {
-
-      var myCircle = circles[i];
-      myCircle.update();
-    }
-  }
-
-  // Runs each time the DOM window resize event fires.
-  // Resets the canvas dimensions to match window,
-  // then draws the new borders accordingly.
-  function resizeCanvas() {
-    //console.log("resized");
-
-    theWidth = window.innerWidth;
-    theHeight = window.innerHeight;
-    mainCanvas.width = theWidth;
-    mainCanvas.height = theHeight;
-
-    setupCircles();
-  }
-
-});
-
-//animatedBackground();

@@ -38,7 +38,7 @@
         </a>
       </div>
       <div class="page-header__navigation main-nav main-nav--closed main-nav--nojs">
-        <a class="page-header__logo logo" href="#">
+        <a class="page-header__logo logo" href="/">
           <picture>
             <!--[if IE 9]>
             <video style="display: none;"><![endif]-->
@@ -53,16 +53,16 @@
           <div class="main-nav__wrapper">
             <ul class="page-header-nav__list main-nav__list">
               <li class="page-header-nav__item main-nav__item">
-                <a class="main-nav__link" href="#">О компании</a>
+                <a class="main-nav__link" href="about-us.html">О компании</a>
               </li>
               <li class="page-header-nav__item main-nav__item">
                 <a class="main-nav__link" href="services.html">Услуги</a>
               </li>
               <li class="page-header-nav__item main-nav__item">
-                <a class="main-nav__link" href="#">Кейсы</a>
+                <a class="main-nav__link" href="cases.html">Кейсы</a>
               </li>
-              <li class="page-header-nav__item main-nav__item">
-                <a class="main-nav__link" href="#">Контакты</a>
+              <li class="page-header-nav__item main-nav__item main-nav__item--active">
+                <a class="main-nav__link" href="contacts.html">Контакты</a>
               </li>
             </ul>
             <a class="main-nav__user-nav-link user-nav-link hidden-sm" href="#">
@@ -96,35 +96,59 @@
         </a>
       </div>
     </header>
+
     <main class="page-main">
       <h1 class="visually-hidden">"Юнайтед Лоджистик Системс" - логистические услуги по всей России.</h1>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <p>Общество с ограниченной ответственностью «Объединенные логистические системы».</p>
-        <p><b>Юридический и фактический адрес:</b> 115093, г. Москва, Павловская ул., дом 27, стр. 1, этаж 3, пом.1
-          <a href="#">Смотреть на карте</a>
-        </p>
 
-        <a class="" href="tel:74997501658">+7 (499) 750-16-58</a>, <a class="" href="tel:74997501659">+7 (499) 750-16-59</a>
-        <a href="mailto:info@ulsys.ru">info@ulsys.ru</a>
-        <a href="www.ulsys.ru">www.ulsys.ru</a>
-        <h2>Реквизиты</h2>
-        <p><b>ОГРН</b> 1107746820631</p>
-        <p><b>ИНН</b> 7725705226 <b>КПП</b> 772501001</p>
-        <p><b>ОКПО</b> 68839754 <b>ОКОГУ</b> 49013</p>
-        <p><b>ОКФС</b> 16 <b>ОКАТО</b> 45296559000</p>
-        <p><b>ОКВЭД</b> 60.10.12 <b>ОКТМО</b> 45914000 <b>ОКОПФ</b> 65</p>
+        <div class="contacts__wrapper">
+          <p>Общество с ограниченной ответственностью<br> «Юнайтед Лоджистикс Системс»</p>
+          <p><b>Юридический и фактический адрес:</b><br> 115093, г. Москва, Павловская ул., дом 27, стр. 1, этаж 3, пом.1</p>
+          <a class="contacts__phone phone" href="tel:74997501658">+7 (499) 750-16-58</a>, <a class="contacts__phone phone" href="tel:74997501659">+7 (499) 750-16-59</a>
+          <a class="contacts__mail" href="mailto:info@ulsys.ru">info@ulsys.ru</a>
+          <a class="contacts__web" href="http://ulsys.ru" target="_blank">www.ulsys.ru</a>
+          <h2 class="contacts__title title">Реквизиты</h2>
+          <p class="contacts__bank-details">
+            <b>ОГРН</b> 1107746820631<br>
+            <b>ИНН</b> 7725705226 <b>КПП</b> 772501001<br>
+            <b>ОКПО</b> 68839754 <b>ОКОГУ</b> 49013<br>
+            <b>ОКФС</b> 16 <b>ОКАТО</b> 45296559000<br>
+            <b>ОКВЭД</b> 60.10.12 <b>ОКТМО</b> 45914000 <b>ОКОПФ</b> 65
+          </p>
+          <p class="contacts__bank-details">
+            <b>Банковские реквизиты:</b><br>
+            ПАО «РОСБАНК»<br>
+            Р/счет 40702810797210000777 БИК 044525256<br>
+            Кор/счет 30101810000000000256
+          </p>
+        </div>
 
-        <b>Банковские реквизиты:</b><br>
-        ПАО «РОСБАНК»<br>
-        Р/счет 40702810797210000777 БИК 044525256<br>
-        Кор/счет 30101810000000000256
+
+        <div class="contacts__map">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae05f5f611c19cd30df5feecbf5ae82940d2169f7aa4fc597ef849a6b84a1564c&amp;source=constructor" width="1280" height="720" frameborder="0"></iframe>
+          <picture>
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.png, img/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png, img/map-tablet@2x.png 2x">
+            <!--[if IE 9]></video><![endif]-->
+            <img class="contacts__map-image" src="img/map-tablet@1x.png" srcset="img/map-tablet@2x.png 2x" alt="Москва, Павловская ул., дом 27, стр. 1, этаж 3, пом.1">
+           </picture>
+
+
+
+
+
+
+        </div>
+
+
       </section>
-
     </main>
+
     <footer class="page-footer">
       <div class="page-footer__navigation">
-        <a class="page-footer__logo logo" href="#">
+        <a class="page-footer__logo logo" href="/">
           <picture>
             <!--[if IE 9]>
             <video style="display: none;"><![endif]-->
@@ -137,16 +161,16 @@
         <nav class="page-footer-nav main-nav">
           <ul class="page-footer-nav__list main-nav__list">
             <li class="page-footer-nav__item main-nav__item">
-              <a class="page-footer-nav__link main-nav__link" href="#">О компании</a>
+              <a class="page-footer-nav__link main-nav__link" href="about-us.html">О компании</a>
             </li>
             <li class="page-footer-nav__item main-nav__item">
-              <a class="page-footer-nav__link main-nav__link" href="#">Услуги</a>
+              <a class="page-footer-nav__link main-nav__link" href="services.html">Услуги</a>
             </li>
             <li class="page-footer-nav__item main-nav__item">
-              <a class="page-footer-nav__link main-nav__link" href="#">Кейсы</a>
+              <a class="page-footer-nav__link main-nav__link" href="cases.html">Кейсы</a>
             </li>
             <li class="page-footer-nav__item main-nav__item">
-              <a class="page-footer-nav__link main-nav__link" href="#">Контакты</a>
+              <a class="page-footer-nav__link main-nav__link" href="contacts.html">Контакты</a>
             </li>
           </ul>
         </nav>
